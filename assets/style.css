@@ -103,7 +103,7 @@ img { max-width: 100%; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 h1 {
   margin-top: 26px;
-  font-size: clamp(44px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.035em; font-weight: 800;
+  font-size: clamp(38px, 5vw, 60px); line-height: 1.05; letter-spacing: -.035em; font-weight: 800;
 }
 h1 em { font-style: normal; color: var(--accent); }
 .lead { margin-top: 24px; font-size: 20px; line-height: 1.55; color: var(--ink-2); max-width: 34em; }

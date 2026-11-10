@@ -3,238 +3,144 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Murilo Filho · Senior QA Engineer</title>
+  <title>Murilo Filho, Senior QA Engineer</title>
   <meta name="description" content="Senior QA Engineer with 6+ years in test automation, API and data-quality testing. Playwright, Appium, Maestro, Selenium, Kafka and PostgreSQL. Remote from Brazil, working with US and European teams.">
   <meta name="author" content="Murilo Filho">
   <link rel="canonical" href="https://murillovskfilho.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Murilo Filho · Senior QA Engineer">
+  <meta property="og:title" content="Murilo Filho, Senior QA Engineer">
   <meta property="og:description" content="Test automation, API and data-quality testing for teams that ship every day.">
   <meta property="og:url" content="https://murillovskfilho.github.io/">
   <meta property="og:image" content="https://murillovskfilho.github.io/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#151513" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#151513">
+  <meta name="color-scheme" content="dark">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
   <link rel="stylesheet" href="assets/style.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="top">
-    <div class="wrap top-inner">
+    <div class="container top-inner">
       <a class="name" href="#top">Murilo Filho</a>
       <nav aria-label="Main">
-        <ol>
-          <li><a href="#results"><span>01</span> Results</a></li>
-          <li><a href="#scope"><span>02</span> Scope</a></li>
-          <li><a href="#toolbox"><span>03</span> Toolbox</a></li>
-          <li><a href="#evidence"><span>04</span> Evidence</a></li>
-          <li><a href="#history"><span>05</span> History</a></li>
-          <li><a href="#contact"><span>06</span> Contact</a></li>
-        </ol>
+        <ul>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#evidence">Evidence</a></li>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#toolbox">Toolbox</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- Cover -->
-    <section class="cover" id="top">
-      <div class="wrap cover-grid">
-        <div class="cover-text">
-          <p class="doc-id">QA report · MF-2026</p>
-          <h1>Test automation teams trust. Releases without surprises.</h1>
-          <p class="lead">I build UI, API, mobile and data-quality test suites that run on every change, and I help teams tell a real bug from a flaky test before it reaches a release.</p>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Releases without surprises.</h1>
+          <p class="lead">Test suites teams trust, running on every change.</p>
           <p class="actions">
             <a class="button" href="mailto:murillovskfilho2@gmail.com">Email me</a>
             <a class="link" href="#evidence">See the evidence</a>
           </p>
         </div>
-
-        <dl class="meta" aria-label="Summary">
-          <div><dt>Role</dt><dd>Senior QA Engineer</dd></div>
-          <div><dt>Based in</dt><dd>Brazil · UTC-3</dd></div>
-          <div><dt>Experience</dt><dd>6+ years, remote since 2020</dd></div>
-          <div><dt>Domains</dt><dd>Logistics, fintech, benefits SaaS, iGaming</dd></div>
-          <div><dt>Languages</dt><dd>English (C2), Portuguese (native)</dd></div>
-          <div><dt>Stack</dt><dd>Playwright, Selenium, Appium, Kafka, SQL</dd></div>
-        </dl>
+        <figure class="hero-shot">
+          <a href="https://murillovskfilho.github.io/playwright-e2e-framework/">
+            <img src="assets/img/report-playwright.jpg" width="1960" height="1470" alt="The Playwright HTML report of playwright-e2e-framework, listing the test runs of the latest CI build">
+          </a>
+          <figcaption>The latest CI report of my Playwright framework, published on every push to main.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- 01 Results -->
-    <section class="section" id="results">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="num">01</span>
+    <section class="results band" id="results">
+      <div class="container">
+        <header class="head split">
           <h2>Results</h2>
-          <p>Measured on real suites, before and after.</p>
+          <p class="lead">Measured on real suites, before and after.</p>
         </header>
-        <table class="results">
-          <thead>
-            <tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th><th scope="col">Where</th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">Flaky failures</th><td data-label="Before">33%</td><td data-label="After" class="after">under 5%</td><td data-label="Where">Selenium/Java suite in GitLab CI, iGaming</td></tr>
-            <tr><th scope="row">Regression time</th><td data-label="Before">~1h30</td><td data-label="After" class="after">~35 min</td><td data-label="Where">Same suite, during a federal regulation rollout</td></tr>
-            <tr><th scope="row">Daily failure triage</th><td data-label="Before">2–3 h</td><td data-label="After" class="after">under 30 min</td><td data-label="Where">~950 data-quality checks on a Kafka data lake</td></tr>
-            <tr><th scope="row">Time to diagnosis</th><td data-label="Before" class="none">not tracked</td><td data-label="After" class="after">under 15 min</td><td data-label="Where">Ingestion failures traced to commits and tickets</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- 02 Scope -->
-    <section class="section" id="scope">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="num">02</span>
-          <h2>Scope</h2>
-          <p>What I test, and the tools I use.</p>
-        </header>
-        <ol class="rows">
-          <li>
-            <span class="row-id">2.1</span>
-            <h3>Test automation</h3>
-            <p>UI and API suites that live in the product repository and run in CI on every change. Critical flows first: sign-up, checkout, permissions, the parts that cost money when they break.</p>
-            <p class="tools">Playwright, Selenium, Cucumber, TypeScript, Java</p>
-          </li>
-          <li>
-            <span class="row-id">2.2</span>
-            <h3>Mobile</h3>
-            <p>Android end-to-end suites in Appium and Maestro on emulators in CI, from smoke flows anyone can read to device and lifecycle checks that need code.</p>
-            <p class="tools">Appium, Maestro, WebdriverIO</p>
-          </li>
-          <li>
-            <span class="row-id">2.3</span>
-            <h3>API and security</h3>
-            <p>Contract tests against the OpenAPI spec, role and tenant matrices, token edge cases. The authorization bugs that functional tests miss.</p>
-            <p class="tools">REST, OpenAPI, Auth0/JWT, RBAC, Postman</p>
-          </li>
-          <li>
-            <span class="row-id">2.4</span>
-            <h3>Data quality</h3>
-            <p>End-to-end checks for event-driven pipelines and SQL audits that find duplicates, gaps and drift between layers before the business reports do.</p>
-            <p class="tools">Kafka, PostgreSQL, advanced SQL</p>
-          </li>
-          <li>
-            <span class="row-id">2.5</span>
-            <h3>Failure triage</h3>
-            <p>Every failure gets sorted into real bug, test instability or environment problem. I fix the root causes and keep a suite the team trusts.</p>
-            <p class="tools">Root-cause analysis, CI hygiene</p>
-          </li>
-          <li>
-            <span class="row-id">2.6</span>
-            <h3>QA from scratch</h3>
-            <p>As a founding QA I set up the strategy, test plans, bug templates and automation for a team with no QA process, and mentored others along the way.</p>
-            <p class="tools">Strategy, BDD, mentoring</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- 03 Toolbox -->
-    <section class="section" id="toolbox">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="num">03</span>
-          <h2>Toolbox</h2>
-          <p>Tools I have used on real projects.</p>
-        </header>
-        <div class="toolbox">
-          <div><h3>Web and API</h3><ul><li>Playwright</li><li>Selenium</li><li>Cucumber</li><li>TestNG</li><li>Robot Framework</li><li>Jest</li><li>Postman</li><li>ReadyAPI</li></ul></div>
-          <div><h3>Mobile</h3><ul><li>Appium</li><li>Maestro</li><li>WebdriverIO</li></ul></div>
-          <div><h3>Data</h3><ul><li>Kafka</li><li>PostgreSQL</li><li>Advanced SQL</li></ul></div>
-          <div><h3>Performance</h3><ul><li>k6</li><li>JMeter</li></ul></div>
-          <div><h3>Languages</h3><ul><li>TypeScript</li><li>JavaScript</li><li>Java</li><li>Python</li><li>SQL</li></ul></div>
-          <div><h3>CI and workflow</h3><ul><li>GitHub Actions</li><li>GitLab CI</li><li>Docker</li><li>Jira</li><li>Claude Code</li></ul></div>
+        <div class="table-wrap" data-reveal>
+          <table>
+            <thead>
+              <tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th><th scope="col">Where</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Flaky failures</th><td class="was"><span>33%</span></td><td class="now">under 5%</td><td class="where">Selenium/Java suite in GitLab CI, iGaming</td></tr>
+              <tr><th scope="row">Regression time</th><td class="was"><span>~1h30</span></td><td class="now">~35 min</td><td class="where">Same suite, during a federal regulation rollout</td></tr>
+              <tr><th scope="row">Daily failure triage</th><td class="was"><span>2 to 3 h</span></td><td class="now">under 30 min</td><td class="where">~950 data-quality checks on a Kafka data lake</td></tr>
+              <tr><th scope="row">Time to diagnosis</th><td class="was none">not tracked</td><td class="now">under 15 min</td><td class="where">Ingestion failures traced to commits and tickets</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
-    <!-- 04 Evidence -->
-    <section class="section" id="evidence">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="num">04</span>
+    <section class="evidence" id="evidence">
+      <div class="container">
+        <header class="head">
           <h2>Evidence</h2>
-          <p>Open source, with CI on every push.</p>
+          <p class="lead">Open source, with CI on every push.</p>
         </header>
-        <ol class="evidence">
+
+        <div class="shots">
+          <article class="shot shot-lead" data-reveal>
+            <a class="shot-img" href="https://github.com/murillovskfilho/playwright-e2e-framework/actions"><img src="assets/img/ci-playwright.jpg" width="1960" height="1470" alt="GitHub Actions run history of playwright-e2e-framework: the e2e workflow passing on main, scheduled runs"></a>
+            <h3>Playwright E2E framework</h3>
+            <p>Persona fixtures, an RBAC matrix, tenant isolation, network mocking, race conditions and axe accessibility scans, on sharded CI.</p>
+            <p class="refs"><a href="https://github.com/murillovskfilho/playwright-e2e-framework">Code</a> <a href="https://murillovskfilho.github.io/playwright-e2e-framework/">Report</a></p>
+          </article>
+          <article class="shot" data-reveal style="--i:1">
+            <a class="shot-img" href="https://murillovskfilho.github.io/selenium-cucumber-bdd/"><img src="assets/img/report-allure.jpg" width="1960" height="1470" alt="Allure report overview of the Selenium and Cucumber suite"></a>
+            <h3>Selenium and Cucumber BDD</h3>
+            <p>Declarative Gherkin on a Dockerized Selenium Grid, parallel scenarios and API-backed setup, with an Allure report.</p>
+            <p class="refs"><a href="https://github.com/murillovskfilho/selenium-cucumber-bdd">Code</a> <a href="https://murillovskfilho.github.io/selenium-cucumber-bdd/">Report</a></p>
+          </article>
+          <article class="shot" data-reveal style="--i:2">
+            <a class="shot-img" href="https://murillovskfilho.github.io/mobile-e2e-appium-maestro/appium/"><img src="assets/img/report-mobile.jpg" width="1960" height="1470" alt="Allure report of the Appium suite on the Android emulator"></a>
+            <h3>Appium and Maestro, side by side</h3>
+            <p>The same shopping-app scenarios in both tools, each on its own emulator in CI, plus a test that pins a crash the suite found.</p>
+            <p class="refs"><a href="https://github.com/murillovskfilho/mobile-e2e-appium-maestro">Code</a> <a href="https://murillovskfilho.github.io/mobile-e2e-appium-maestro/">Report</a></p>
+          </article>
+        </div>
+
+        <ol class="index" data-reveal>
           <li>
-            <span class="row-id">E-01</span>
-            <div>
-              <h3>LLM evaluation harness</h3>
-              <p>42 cases on a Claude-based support assistant: hallucination, prompt injection hidden in data, privacy and the JSON contract. An LLM judge plus deterministic checks, with a self-test that proves the grader.</p>
-            </div>
+            <h3>LLM evaluation harness</h3>
+            <p>42 cases on a Claude-based support assistant: hallucination, prompt injection hidden in data, privacy and the JSON contract. An LLM judge plus deterministic checks, with a self-test that proves the grader.</p>
             <p class="tools">Claude API, TypeScript, Zod</p>
-            <p class="refs"><a href="https://github.com/murillovskfilho/llm-eval-harness">Code</a><a href="https://github.com/murillovskfilho/llm-eval-harness/blob/main/evals/logistics-support/SUMMARY.md">Results</a></p>
+            <p class="refs"><a href="https://github.com/murillovskfilho/llm-eval-harness">Code</a> <a href="https://github.com/murillovskfilho/llm-eval-harness/blob/main/evals/logistics-support/SUMMARY.md">Results</a></p>
           </li>
           <li>
-            <span class="row-id">E-02</span>
-            <div>
-              <h3>k6 load testing</h3>
-              <p>Smoke, load, stress and spike tests on a Node and PostgreSQL API. The load test finds a missing index the smoke test misses; the fix takes p95 at 50 users from 3.98 s to 3.9 ms, with the root cause shown in the query plans.</p>
-            </div>
+            <h3>k6 load testing</h3>
+            <p>Smoke, load, stress and spike tests on a Node and PostgreSQL API. The load test finds a missing index the smoke test misses; the fix takes p95 at 50 users from 3.98 s to 3.9 ms, with the root cause shown in the query plans.</p>
             <p class="tools">k6, PostgreSQL, Docker</p>
-            <p class="refs"><a href="https://github.com/murillovskfilho/k6-load-testing">Code</a><a href="https://github.com/murillovskfilho/k6-load-testing#analysis">Analysis</a></p>
+            <p class="refs"><a href="https://github.com/murillovskfilho/k6-load-testing">Code</a> <a href="https://github.com/murillovskfilho/k6-load-testing#analysis">Analysis</a></p>
           </li>
           <li>
-            <span class="row-id">E-03</span>
-            <div>
-              <h3>Playwright E2E framework</h3>
-              <p>Persona fixtures, an RBAC matrix, tenant isolation, network mocking, race conditions and axe accessibility scans, on sharded CI.</p>
-            </div>
-            <p class="tools">Playwright, TypeScript</p>
-            <p class="refs"><a href="https://github.com/murillovskfilho/playwright-e2e-framework">Code</a><a href="https://murillovskfilho.github.io/playwright-e2e-framework/">Report</a></p>
-          </li>
-          <li>
-            <span class="row-id">E-04</span>
-            <div>
-              <h3>Appium and Maestro, side by side</h3>
-              <p>The same shopping-app scenarios in both tools, each on its own emulator in CI, plus a test that pins a crash the suite found.</p>
-            </div>
-            <p class="tools">Appium, Maestro, Android</p>
-            <p class="refs"><a href="https://github.com/murillovskfilho/mobile-e2e-appium-maestro">Code</a><a href="https://murillovskfilho.github.io/mobile-e2e-appium-maestro/">Report</a></p>
-          </li>
-          <li>
-            <span class="row-id">E-05</span>
-            <div>
-              <h3>API RBAC testing</h3>
-              <p>136 tests against a multi-tenant billing API: forged JWTs, a permission matrix, BOLA, mass assignment and a strict OpenAPI contract.</p>
-            </div>
+            <h3>API RBAC testing</h3>
+            <p>136 tests against a multi-tenant billing API: forged JWTs, a permission matrix, BOLA, mass assignment and a strict OpenAPI contract.</p>
             <p class="tools">TypeScript, Jest, OpenAPI</p>
             <p class="refs"><a href="https://github.com/murillovskfilho/api-rbac-testing">Code</a></p>
           </li>
           <li>
-            <span class="row-id">E-06</span>
-            <div>
-              <h3>Data pipeline quality lab</h3>
-              <p>E2E and SQL data-quality tests on a Kafka bronze/silver/gold pipeline, with a canary job that injects real defects to prove the checks work.</p>
-            </div>
+            <h3>Data pipeline quality lab</h3>
+            <p>E2E and SQL data-quality tests on a Kafka bronze/silver/gold pipeline, with a canary job that injects real defects to prove the checks work.</p>
             <p class="tools">Kafka, PostgreSQL, Jest</p>
             <p class="refs"><a href="https://github.com/murillovskfilho/data-pipeline-quality-lab">Code</a></p>
           </li>
           <li>
-            <span class="row-id">E-07</span>
-            <div>
-              <h3>Selenium and Cucumber BDD</h3>
-              <p>Declarative Gherkin on a Dockerized Selenium Grid, parallel scenarios and API-backed setup, with an Allure report.</p>
-            </div>
-            <p class="tools">Java, Selenium, Cucumber</p>
-            <p class="refs"><a href="https://github.com/murillovskfilho/selenium-cucumber-bdd">Code</a><a href="https://murillovskfilho.github.io/selenium-cucumber-bdd/">Report</a></p>
-          </li>
-          <li>
-            <span class="row-id">E-08</span>
-            <div>
-              <h3>QA Starter Kit</h3>
-              <p>A ready-to-clone Playwright and TypeScript setup: UI and API tests, typed fixtures, contract checks, multi-environment config and sharded CI.</p>
-            </div>
+            <h3>QA Starter Kit</h3>
+            <p>A ready-to-clone Playwright and TypeScript setup: UI and API tests, typed fixtures, contract checks, multi-environment config and sharded CI.</p>
             <p class="tools">Playwright, Zod, GitHub Actions</p>
             <p class="refs"><a href="https://github.com/murillovskfilho/qa-starter-kit">Code</a></p>
           </li>
@@ -242,70 +148,96 @@
       </div>
     </section>
 
-    <!-- 05 History -->
-    <section class="section" id="history">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="num">05</span>
-          <h2>History</h2>
-          <p>Employee, contractor and consultant.</p>
+    <section class="scope" id="scope">
+      <div class="container">
+        <header class="head split">
+          <h2>Scope</h2>
+          <p class="lead">What I test, and the tools I use.</p>
         </header>
-        <ol class="log">
-          <li>
-            <time>2024 – now</time>
-            <h3>Senior QA Engineering Consultant <span>Independent</span></h3>
-            <p>Quality strategy, test design and automation for startups and technology companies.</p>
-          </li>
-          <li>
-            <time>2025 – now</time>
-            <h3>Founding QA Engineer <span>B2B benefits platform, contract</span></h3>
-            <p>First QA at the company: built the testing strategy and the web, mobile and API automation from zero.</p>
-          </li>
-          <li>
-            <time>2026</time>
-            <h3>Senior QA Engineer <span>US logistics platform, contract</span></h3>
-            <p>API, frontend and data-quality automation on microservices and a Kafka-fed data lake; owned the daily triage of ~950 checks.</p>
-          </li>
-          <li>
-            <time>2025 – 2026</time>
-            <h3>Senior Automation QA Engineer <span>iGaming platform</span></h3>
-            <p>Frontline QA for Brazil's federal sports-betting regulation rollout; cut flaky failures from 33% to under 5%.</p>
-          </li>
-          <li>
-            <time>2023 – 2025</time>
-            <h3>Software QA Engineer II <span>Global fintech</span></h3>
-            <p>Selenium/TestNG, Python and Robot Framework suites wired into CI; mentored two junior QA engineers.</p>
-          </li>
-          <li>
-            <time>2021 – 2023</time>
-            <h3>QA Engineer and QA Analyst <span>IT consulting company, edtech startup</span></h3>
-            <p>Web and mobile testing, Selenium and Postman automation, test plans and release support.</p>
-          </li>
+        <ol class="rows" data-reveal>
+          <li><h3>Test automation</h3><p>UI and API suites that live in the product repository and run in CI on every change. Critical flows first: sign-up, checkout, permissions, the parts that cost money when they break.</p><p class="tools">Playwright, Selenium, Cucumber, TypeScript, Java</p></li>
+          <li><h3>Mobile</h3><p>Android end-to-end suites in Appium and Maestro on emulators in CI, from smoke flows anyone can read to device and lifecycle checks that need code.</p><p class="tools">Appium, Maestro, WebdriverIO</p></li>
+          <li><h3>API and security</h3><p>Contract tests against the OpenAPI spec, role and tenant matrices, token edge cases. The authorization bugs that functional tests miss.</p><p class="tools">REST, OpenAPI, Auth0/JWT, RBAC, Postman</p></li>
+          <li><h3>Data quality</h3><p>End-to-end checks for event-driven pipelines and SQL audits that find duplicates, gaps and drift between layers before the business reports do.</p><p class="tools">Kafka, PostgreSQL, advanced SQL</p></li>
+          <li><h3>Failure triage</h3><p>Every failure gets sorted into real bug, test instability or environment problem. I fix the root causes and keep a suite the team trusts.</p><p class="tools">Root-cause analysis, CI hygiene</p></li>
+          <li><h3>QA from scratch</h3><p>As a founding QA I set up the strategy, test plans, bug templates and automation for a team with no QA process, and mentored others along the way.</p><p class="tools">Strategy, BDD, mentoring</p></li>
         </ol>
       </div>
     </section>
 
-    <!-- 06 Contact -->
-    <section class="section contact" id="contact">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="num">06</span>
-          <h2>Contact</h2>
-          <p>Email or LinkedIn. I reply within a day.</p>
+    <section class="toolbox band" id="toolbox">
+      <div class="container">
+        <header class="head">
+          <h2>Toolbox</h2>
+          <p class="lead">Tools I have used on real projects.</p>
         </header>
-        <dl class="reach">
-          <div><dt>Email</dt><dd><a href="mailto:murillovskfilho2@gmail.com">murillovskfilho2@gmail.com</a></dd></div>
-          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/murilo-filho-50837317b">in/murilo-filho-50837317b</a></dd></div>
-          <div><dt>GitHub</dt><dd><a href="https://github.com/murillovskfilho">murillovskfilho</a></dd></div>
-        </dl>      </div>
+        <dl class="kit" data-reveal>
+          <div><dt>Web and API</dt><dd>Playwright, Selenium, Cucumber, TestNG, Robot Framework, Jest, Postman, ReadyAPI</dd></div>
+          <div><dt>Mobile</dt><dd>Appium, Maestro, WebdriverIO</dd></div>
+          <div><dt>Data</dt><dd>Kafka, PostgreSQL, Advanced SQL</dd></div>
+          <div><dt>Performance</dt><dd>k6, JMeter</dd></div>
+          <div><dt>Languages</dt><dd>TypeScript, JavaScript, Java, Python, SQL</dd></div>
+          <div><dt>CI and workflow</dt><dd>GitHub Actions, GitLab CI, Docker, Jira, Claude Code</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="history" id="history">
+      <div class="container history-grid">
+        <header class="head">
+          <h2>History</h2>
+          <p class="lead">Employee, contractor and consultant.</p>
+        </header>
+        <ol class="log" data-reveal>
+          <li><time>2024 to now</time><div><h3>Senior QA Engineering Consultant</h3><p class="org">Independent</p><p>Quality strategy, test design and automation for startups and technology companies.</p></div></li>
+          <li><time>2025 to now</time><div><h3>Founding QA Engineer</h3><p class="org">B2B benefits platform, contract</p><p>First QA at the company: built the testing strategy and the web, mobile and API automation from zero.</p></div></li>
+          <li><time>2026</time><div><h3>Senior QA Engineer</h3><p class="org">US logistics platform, contract</p><p>API, frontend and data-quality automation on microservices and a Kafka-fed data lake; owned the daily triage of ~950 checks.</p></div></li>
+          <li><time>2025 to 2026</time><div><h3>Senior Automation QA Engineer</h3><p class="org">iGaming platform</p><p>Frontline QA for Brazil’s federal sports-betting regulation rollout; cut flaky failures from 33% to under 5%.</p></div></li>
+          <li><time>2023 to 2025</time><div><h3>Software QA Engineer II</h3><p class="org">Global fintech</p><p>Selenium/TestNG, Python and Robot Framework suites wired into CI; mentored two junior QA engineers.</p></div></li>
+          <li><time>2021 to 2023</time><div><h3>QA Engineer and QA Analyst</h3><p class="org">IT consulting company, edtech startup</p><p>Web and mobile testing, Selenium and Postman automation, test plans and release support.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-main">
+          <h2>Contact</h2>
+          <p class="lead">Email or LinkedIn. I reply within a day.</p>
+          <p class="mail"><a href="mailto:murillovskfilho2@gmail.com">murillovskfilho2@gmail.com</a></p>
+          <p class="elsewhere"><a href="https://www.linkedin.com/in/murilo-filho-50837317b">LinkedIn, in/murilo-filho-50837317b</a> <a href="https://github.com/murillovskfilho">GitHub, murillovskfilho</a></p>
+        </div>
+        <dl class="facts" aria-label="Summary">
+          <div><dt>Role</dt><dd>Senior QA Engineer</dd></div>
+          <div><dt>Based in</dt><dd>Brazil, UTC-3</dd></div>
+          <div><dt>Experience</dt><dd>6+ years, remote since 2020</dd></div>
+          <div><dt>Domains</dt><dd>Logistics, fintech, benefits SaaS, iGaming</dd></div>
+          <div><dt>Languages</dt><dd>English (C2), Portuguese (native)</dd></div>
+          <div><dt>Stack</dt><dd>Playwright, Selenium, Appium, Kafka, SQL</dd></div>
+        </dl>
+      </div>
     </section>
   </main>
 
   <footer class="foot">
-    <div class="wrap foot-inner">
+    <div class="container foot-inner">
       <p>© 2026 Murilo Filho</p>
       <p>B.Sc. Computer Science, IFCE</p>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const items = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        items.forEach((el) => el.classList.add('is-seen'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('is-seen'); io.unobserve(e.target); }
+      }), { rootMargin: '0px 0px -12% 0px' });
+      items.forEach((el) => io.observe(el));
+    })();
+  </script>
 </body>
 </html>

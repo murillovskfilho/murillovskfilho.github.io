@@ -99,9 +99,9 @@ h1 {
   display: grid; grid-template-columns: 4.5rem 1fr minmax(0, 28rem); align-items: baseline; gap: 24px;
   padding-bottom: 20px; margin-bottom: 8px; border-bottom: 1px solid var(--rule-strong);
 }
-.section-head .num { font: 14px var(--mono); color: var(--mark); }
+.section-head .num { font: 14px var(--mono); color: var(--ink-3); }
 h2 { font: 400 clamp(32px, 4vw, 46px)/1.1 var(--serif); letter-spacing: -.02em; }
-.section-head p { color: var(--ink-3); font-size: 15px; align-self: end; justify-self: end; text-align: right; }
+.section-head p { color: var(--ink-3); font-size: 15px; align-self: end; justify-self: end; text-align: right; white-space: nowrap; }
 
 h3 { font: 500 23px/1.25 var(--serif); letter-spacing: -.01em; }
 .row-id { font: 13px/2.1 var(--mono); color: var(--ink-3); }
@@ -186,7 +186,7 @@ h3 { font: 500 23px/1.25 var(--serif); letter-spacing: -.01em; }
 @media (max-width: 960px) {
   .cover-grid { grid-template-columns: 1fr; gap: 56px; }
   .section-head { grid-template-columns: 3rem 1fr; gap: 16px; }
-  .section-head p { grid-column: 2; justify-self: start; text-align: left; }
+  .section-head p { grid-column: 2; justify-self: start; text-align: left; white-space: normal; }
   .rows li { grid-template-columns: 3rem minmax(0, 1fr); gap: 8px 16px; }
   .rows li > :not(.row-id) { grid-column: 2; }
   .evidence li { grid-template-columns: 3rem minmax(0, 1fr); gap: 10px 16px; }

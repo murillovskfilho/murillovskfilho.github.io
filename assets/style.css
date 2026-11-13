@@ -1,5 +1,5 @@
 /* Hallmark · shape: index-led portfolio, from Index-First · genre: editorial · theme: brand · redesign: full
- * paper: oklch(16% 0.009 85) · accent: oklch(74% 0.1 258), blue pencil · display: Newsreader · body: IBM Plex Sans · hero: Stage · nav: edge-aligned · footer: colophon · signature: the live Playwright CI report in the hero, and the old numbers struck through as the results table scrolls in
+ * paper: oklch(16% 0.009 85) · accent: oklch(74% 0.1 258), blue pencil · display: Newsreader · body: IBM Plex Sans · hero: Stage · nav: edge-aligned · footer: colophon · signature: the live Playwright CI report in the hero, and the old numbers struck through once the results table comes into view (time-based, never scroll-scrubbed)
  * axes: warm graphite/serif/blue pencil · posture: Stage · modes: dark only (the owner's brand) · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · answered F-weight · body stays at 400, Plex Sans 350 is not loaded and a synthetic weight would look worse */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, a QA portfolio is a crowded category; the page leads with the real CI report and the before/after table instead of a list of claims */
@@ -143,28 +143,37 @@ h3 { font-weight: 500; }
 .foot-inner { display: flex; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-lg) var(--space-xl); border-top: var(--rule-hair) solid var(--color-band-rule); font-size: var(--text-sm); }
 
 /* ---------- Motion ---------- */
-/* Load: the hero settles in once. */
+/* All motion is time-based: it plays on its own, never scrubbed by the scroll position.
+   One curve (--ease-out), opacity and a short rise only. The finished page is the base state,
+   so reduced motion, no script and no animation support all get the complete layout. */
+:root { --dur-enter: 560ms; --stagger: 90ms; }
+
+/* Load: the first screen composes itself once, top to bottom, with no scroll needed. */
 @media (prefers-reduced-motion: no-preference) {
-  .hero-text > *, .hero-shot { animation: settle var(--dur-long) var(--ease-out) both; }
-  .hero-text > :nth-child(2) { animation-delay: 60ms; }
-  .hero-text > :nth-child(3) { animation-delay: 120ms; }
-  .hero-shot { animation-delay: 180ms; }
-  @keyframes settle { from { opacity: 0; transform: translateY(12px); } }
+  .top-inner { animation: fade var(--dur-enter) var(--ease-out) both; }
+  .hero-text > *, .hero-shot { animation: settle var(--dur-enter) var(--ease-out) both; animation-delay: var(--d, 0ms); }
+  .hero-text > :nth-child(1) { --d: 80ms; }
+  .hero-text > :nth-child(2) { --d: calc(80ms + var(--stagger)); }
+  .hero-text > :nth-child(3) { --d: calc(80ms + 2 * var(--stagger)); }
+  .hero-shot { --d: calc(80ms + 3 * var(--stagger)); }
+  @keyframes settle { from { opacity: 0; transform: translateY(10px); } }
+  @keyframes fade { from { opacity: 0; } }
 }
-/* The one reveal: each block rises once as it enters (hidden only when the script runs). */
+
+/* Further down: each block plays one short timed entrance when it first comes into view
+   (hidden only under the .js class, so the page is complete without script). */
 @media (prefers-reduced-motion: no-preference) {
-  .js [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity var(--dur-long) var(--ease-out), transform var(--dur-long) var(--ease-out); transition-delay: calc(var(--i, 0) * 80ms); }
+  .js [data-reveal] { opacity: 0; transform: translateY(10px); transition: opacity var(--dur-enter) var(--ease-out), transform var(--dur-enter) var(--ease-out); transition-delay: calc(var(--i, 0) * var(--stagger)); }
   .js [data-reveal].is-seen { opacity: 1; transform: none; }
 }
-/* The one scroll pattern: the old numbers get struck through as the table crosses the screen.
-   The finished table (lines drawn) is the base state. */
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) and (min-width: 40rem) {
-    .results td.was span::after { animation: strike linear both; animation-timeline: view(); animation-range: entry 60% cover 50%; }
-    .results tbody tr:nth-child(2) td.was span::after { animation-range: entry 80% cover 55%; }
-    .results tbody tr:nth-child(3) td.was span::after { animation-range: entry 100% cover 60%; }
-    @keyframes strike { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-  }
+
+/* Results: once the table has arrived, the blue pencil strikes the old numbers row by row.
+   Lines drawn is the base state. */
+@media (prefers-reduced-motion: no-preference) {
+  .js .table-wrap.is-seen td.was span::after { animation: strike var(--dur-enter) var(--ease-out) both; animation-delay: calc(240ms + var(--row, 0) * var(--stagger)); }
+  .results tbody tr:nth-child(2) { --row: 1; }
+  .results tbody tr:nth-child(3) { --row: 2; }
+  @keyframes strike { from { transform: scaleX(0); } }
 }
 
 /* ---------- Responsive ---------- */

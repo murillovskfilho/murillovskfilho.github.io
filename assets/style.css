@@ -70,7 +70,14 @@ section[id]:not(.hero) { padding-block: var(--section-gap); }
 .band { background: var(--color-paper-2); color: var(--color-ink); padding-block: var(--section-gap-s) !important; }
 .head { margin-bottom: var(--space-2xl); }
 .head .lead { margin-top: var(--space-md); }
-.head.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--gap-columns); align-items: end; }
+/* One 12-column grid for section heads and rows, so every column edge lines up down the page:
+   titles on 1-4, text on 5-10, tools and links on 11-12 */
+.head.split, .ledger li, .rows li { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); }
+.head.split > :first-child, .ledger li > h3, .rows li > h3 { grid-column: 1 / span 4; }
+.head.split > .lead { grid-column: 5 / span 7; }
+.ledger li > .system, .rows li > p:not(.tools) { grid-column: 5 / span 6; }
+.ledger li > .refs, .rows li > .tools { grid-column: 11 / span 2; }
+.head.split { align-items: end; }
 .head.split .lead { margin-top: 0; }
 h3 { font-weight: 500; }
 .tools { font-size: var(--text-sm); color: var(--color-muted); }
@@ -94,14 +101,14 @@ h3 { font-weight: 500; }
 .hero-shot a { transition: border-color var(--dur-short) var(--ease-out); }
 .hero-shot a:hover { border-color: var(--color-accent); }
 .ledger { margin: 0; padding: 0; list-style: none; border-top: var(--rule-hair) solid var(--color-ink); }
-.ledger li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: var(--gap-columns); padding-block: var(--space-xl); border-bottom: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
+.ledger li { padding-block: var(--space-xl); border-bottom: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
 .ledger h3 { font-size: var(--text-xl); }
 .ledger .system { color: var(--color-ink-2); max-width: 68ch; }
 .ledger .refs { flex-direction: column; gap: var(--space-2xs); }
 
 /* Scope: rows */
 .rows { margin: 0; padding: 0; list-style: none; }
-.rows li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr); gap: var(--gap-columns); padding-block: var(--space-xl); border-top: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
+.rows li { padding-block: var(--space-xl); border-top: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
 .rows li p:not(.tools) { color: var(--color-ink-2); }
 
 /* Toolbox: three across */
@@ -172,6 +179,9 @@ h3 { font-weight: 500; }
 }
 
 /* ---------- Responsive ---------- */
+/* The brand block above sets --gutter: 64px after base.css, so restate the narrower gutters here */
+@media (max-width: 60rem) { :root { --gutter: 24px; } }
+@media (max-width: 40rem) { :root { --gutter: 16px; } }
 @media (max-width: 60rem) {
   .top ul { display: none; }
   .hero { min-height: 0; }
@@ -179,6 +189,9 @@ h3 { font-weight: 500; }
   .head.split .lead { margin-top: var(--space-md); }
   .history .head { position: static; }
   .ledger li, .rows li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .head.split > :first-child, .head.split > .lead,
+  .ledger li > h3, .ledger li > .system, .ledger li > .refs,
+  .rows li > h3, .rows li > p:not(.tools), .rows li > .tools { grid-column: 1 / -1; }
   .ledger .refs { flex-direction: row; gap: var(--space-md); }
   .kit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

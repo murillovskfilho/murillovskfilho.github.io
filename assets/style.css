@@ -173,6 +173,7 @@ h3 { font-weight: 500; }
   .js .table-wrap.is-seen td.was span::after { animation: strike var(--dur-enter) var(--ease-out) both; animation-delay: calc(240ms + var(--row, 0) * var(--stagger)); }
   .results tbody tr:nth-child(2) { --row: 1; }
   .results tbody tr:nth-child(3) { --row: 2; }
+  .results tbody tr:nth-child(4) { --row: 3; }
   @keyframes strike { from { transform: scaleX(0); } }
 }
 

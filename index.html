@@ -89,67 +89,67 @@
       <div class="container">
         <header class="head split">
           <h2>Analyses</h2>
-          <p class="lead">What each suite was built to prove, and what it found. Open source, with CI on every push.</p>
+          <p class="lead">Open source suites, with CI on every push.</p>
         </header>
 
         <ol class="ledger" data-reveal>
           <li>
-            <time datetime="2026-11-10">2026-11-10</time>
             <div>
               <h3>k6 load testing</h3>
-              <p class="system">A parcel-tracking API on PostgreSQL, 3 million tracking events</p>
-              <p>The smoke test passed. Under load, p95 reached 3.98 s at 50 users, and from 200 users a third of requests failed, including an endpoint that never touched the slow table: it was waiting for the same connection pool. pg_stat_statements and EXPLAIN traced it to an unindexed foreign key. With the index, p95 fell to 3.9 ms and errors to zero at 300 users.</p>
+              <p class="system">Load, stress and spike tests on a PostgreSQL API that found a missing index: p95 under load went from 3.98 s to 3.9 ms.</p>
             </div>
             <p class="refs"><a href="https://github.com/murillovskfilho/k6-load-testing#analysis">Analysis</a> <a href="https://github.com/murillovskfilho/k6-load-testing">Code</a></p>
           </li>
           <li>
-            <time datetime="2026-11-10">2026-11-10</time>
             <div>
               <h3>LLM evaluation harness</h3>
-              <p class="system">A Claude-based parcel-support assistant, 42 cases</p>
-              <p>Haiku and Sonnet both passed 90%, and disagreed on 8 cases: services the policy never offered, needless escalations, a privacy slip, and a refusal that still quoted the attacker’s code. The LLM judge caught what every deterministic check let through.</p>
+              <p class="system">42 cases on a Claude support assistant: two models at the same 90% pass rate, failing on different cases.</p>
             </div>
             <p class="refs"><a href="https://github.com/murillovskfilho/llm-eval-harness/blob/main/evals/logistics-support/SUMMARY.md">Results</a> <a href="https://github.com/murillovskfilho/llm-eval-harness">Code</a></p>
           </li>
           <li>
-            <time datetime="2026-11-10">2026-11-10</time>
             <div>
               <h3>Appium and Maestro, side by side</h3>
-              <p class="system">An Android shopping app, the same scenarios in both tools on CI emulators</p>
-              <p>The suites found a crash: tapping the second catalog product, or the seventh onwards, kills the app with an ArrayIndexOutOfBoundsException. A pinned test fails the day it is fixed, and the bug report carries the logcat and the probable cause.</p>
+              <p class="system">The same Android scenarios in both tools on CI emulators, with a pinned test for a crash the suites found.</p>
             </div>
             <p class="refs"><a href="https://murillovskfilho.github.io/mobile-e2e-appium-maestro/">Reports</a> <a href="https://murillovskfilho.github.io/mobile-e2e-appium-maestro/appium/">Appium run</a> <a href="https://github.com/murillovskfilho/mobile-e2e-appium-maestro">Code</a></p>
           </li>
           <li>
-            <time datetime="2026-11-04">2026-11-04</time>
             <div>
               <h3>Data pipeline quality lab</h3>
-              <p class="system">A Kafka bronze, silver and gold pipeline on PostgreSQL</p>
-              <p>A canary job injects three defects and fails the build if a check misses one. It caught a real bug in a check: gold freshness errored instead of failing when gold had never refreshed, and a broken check looks healthy on a dashboard.</p>
+              <p class="system">SQL checks on a Kafka bronze, silver and gold pipeline, and a canary job that proves they catch injected defects.</p>
             </div>
             <p class="refs"><a href="https://github.com/murillovskfilho/data-pipeline-quality-lab">Code</a></p>
           </li>
           <li>
-            <time datetime="2026-11-04">2026-11-04</time>
             <div>
               <h3>API RBAC testing</h3>
-              <p class="system">A multi-tenant billing API, 136 tests</p>
-              <p>Forged JWTs, BOLA, mass assignment and a strict OpenAPI contract. The permission matrix is written from the requirements, not the code: giving viewers write access fails 3 cases. Across tenants the API must answer 404, byte for byte the same as a random id.</p>
+              <p class="system">136 tests on a multi-tenant billing API: forged JWTs, BOLA, mass assignment and an OpenAPI contract.</p>
             </div>
             <p class="refs"><a href="https://github.com/murillovskfilho/api-rbac-testing">Code</a></p>
           </li>
           <li>
-            <time datetime="2026-11-04">2026-11-04</time>
             <div>
               <h3>Playwright E2E framework</h3>
-              <p class="system">A multi-tenant web app: roles, tenants, network failures, races</p>
-              <p>Every permission hidden in the UI is also tested at the API. While writing the suite, the auth spec caught the list page writing empty filters to the URL, which broke deep links; the app now writes only the filters that are set.</p>
+              <p class="system">Roles, tenant isolation, network failures and races on a web app, with every hidden permission also tested at the API.</p>
             </div>
             <p class="refs"><a href="https://murillovskfilho.github.io/playwright-e2e-framework/">Report</a> <a href="https://github.com/murillovskfilho/playwright-e2e-framework/actions">CI</a> <a href="https://github.com/murillovskfilho/playwright-e2e-framework">Code</a></p>
           </li>
+          <li>
+            <div>
+              <h3>Selenium and Cucumber BDD</h3>
+              <p class="system">Declarative Gherkin on a Dockerized Selenium Grid, with parallel scenarios, API-backed setup and an Allure report.</p>
+            </div>
+            <p class="refs"><a href="https://murillovskfilho.github.io/selenium-cucumber-bdd/">Report</a> <a href="https://github.com/murillovskfilho/selenium-cucumber-bdd">Code</a></p>
+          </li>
+          <li>
+            <div>
+              <h3>QA Starter Kit</h3>
+              <p class="system">A ready-to-clone Playwright and TypeScript setup: UI and API tests, typed fixtures, contract checks and sharded CI.</p>
+            </div>
+            <p class="refs"><a href="https://github.com/murillovskfilho/qa-starter-kit">Code</a></p>
+          </li>
         </ol>
-
-        <p class="also">Also on GitHub: <a href="https://github.com/murillovskfilho/selenium-cucumber-bdd">Selenium and Cucumber BDD</a> with its <a href="https://murillovskfilho.github.io/selenium-cucumber-bdd/">Allure report</a>, and the <a href="https://github.com/murillovskfilho/qa-starter-kit">QA Starter Kit</a>.</p>
       </div>
     </section>
 

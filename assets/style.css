@@ -1,4 +1,4 @@
-/* Hallmark · shape: index-led portfolio, from Index-First; projects as a dated ledger of analyses (the Jepsen model) · genre: editorial · theme: brand · redesign: full
+/* Hallmark · shape: index-led portfolio, from Index-First; projects as a ledger of titles, captions and links · genre: editorial · theme: brand · redesign: full
  * paper: oklch(16% 0.009 85) · accent: oklch(74% 0.1 258), blue pencil · display: Newsreader · body: IBM Plex Sans · hero: Stage · nav: edge-aligned · footer: colophon · signature: the live Playwright CI report in the hero, and each project told as what its tests found
  * axes: warm graphite/serif/blue pencil · posture: Stage · modes: dark only (the owner's brand) · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · answered F-weight · body stays at 400, Plex Sans 350 is not loaded and a synthetic weight would look worse */
@@ -90,18 +90,14 @@ h3 { font-weight: 500; }
 .results td.now { color: var(--color-ink); font-weight: 500; }
 .results td.where { color: var(--color-ink-2); font-size: var(--text-sm); }
 
-/* Analyses: a dated ledger, one finding per entry (the Jepsen model: the system, then what the test showed) */
+/* Analyses: a ledger, one project per row (title, a one-line caption, links) */
 .hero-shot a { transition: border-color var(--dur-short) var(--ease-out); }
 .hero-shot a:hover { border-color: var(--color-accent); }
 .ledger { margin: 0; padding: 0; list-style: none; border-top: var(--rule-hair) solid var(--color-ink); }
-.ledger li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 8fr) minmax(0, 2fr); gap: var(--gap-columns); padding-block: var(--space-xl); border-bottom: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
-.ledger time { font: var(--text-sm)/1.9 var(--font-outlier); font-variant-numeric: tabular-nums; color: var(--color-muted); }
+.ledger li { display: grid; grid-template-columns: minmax(0, 10fr) minmax(0, 2fr); gap: var(--gap-columns); padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
 .ledger h3 { font-size: var(--text-xl); }
-.ledger .system { margin-top: var(--space-2xs); font-size: var(--text-sm); color: var(--color-muted); }
-.ledger .system + p { margin-top: var(--space-md); color: var(--color-ink-2); max-width: 68ch; }
+.ledger .system { margin-top: var(--space-xs); color: var(--color-ink-2); max-width: 68ch; }
 .ledger .refs { flex-direction: column; gap: var(--space-2xs); }
-.also { margin-top: var(--space-xl); font-size: var(--text-sm); color: var(--color-muted); }
-.also a { color: var(--color-ink-2); }
 
 /* Scope: rows */
 .rows { margin: 0; padding: 0; list-style: none; }

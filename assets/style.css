@@ -94,9 +94,9 @@ h3 { font-weight: 500; }
 .hero-shot a { transition: border-color var(--dur-short) var(--ease-out); }
 .hero-shot a:hover { border-color: var(--color-accent); }
 .ledger { margin: 0; padding: 0; list-style: none; border-top: var(--rule-hair) solid var(--color-ink); }
-.ledger li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 5fr) minmax(0, 2fr); gap: var(--gap-columns); padding-block: var(--space-xl); border-bottom: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
+.ledger li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: var(--gap-columns); padding-block: var(--space-xl); border-bottom: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
 .ledger h3 { font-size: var(--text-xl); }
-.ledger .system { color: var(--color-ink-2); max-width: 60ch; }
+.ledger .system { color: var(--color-ink-2); max-width: 68ch; }
 .ledger .refs { flex-direction: column; gap: var(--space-2xs); }
 
 /* Scope: rows */

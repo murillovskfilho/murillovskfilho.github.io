@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=2026-11-17b">
+  <link rel="stylesheet" href="assets/style.css?v=2026-11-18">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -92,55 +92,71 @@
           <p class="lead">Open source, with CI on every push.</p>
         </header>
 
-        <div class="shots">
-          <article class="shot shot-lead" data-reveal>
-            <a class="shot-img" href="https://github.com/murillovskfilho/playwright-e2e-framework/actions"><img src="assets/img/ci-playwright.jpg" width="1960" height="1470" alt="GitHub Actions run history of playwright-e2e-framework: the e2e workflow passing on main, scheduled runs"></a>
+        <ol class="index">
+          <li data-reveal>
             <h3>Playwright E2E framework</h3>
-            <p>Persona fixtures, an RBAC matrix, tenant isolation, network mocking, race conditions and axe accessibility scans, on sharded CI.</p>
+            <div class="what">
+              <p>Persona fixtures, an RBAC matrix, tenant isolation, network mocking, race conditions and axe accessibility scans, on sharded CI.</p>
+              <a class="thumb" href="https://github.com/murillovskfilho/playwright-e2e-framework/actions"><img src="assets/img/ci-playwright.jpg" width="1960" height="1470" loading="lazy" alt="GitHub Actions run history of playwright-e2e-framework: the e2e workflow passing on main, scheduled runs"></a>
+            </div>
+            <p class="tools">Playwright, TypeScript, axe-core</p>
             <p class="refs"><a href="https://github.com/murillovskfilho/playwright-e2e-framework">Code</a> <a href="https://murillovskfilho.github.io/playwright-e2e-framework/">Report</a></p>
-          </article>
-          <article class="shot" data-reveal style="--i:1">
-            <a class="shot-img" href="https://murillovskfilho.github.io/selenium-cucumber-bdd/"><img src="assets/img/report-allure.jpg" width="1960" height="1470" alt="Allure report overview of the Selenium and Cucumber suite"></a>
-            <h3>Selenium and Cucumber BDD</h3>
-            <p>Declarative Gherkin on a Dockerized Selenium Grid, parallel scenarios and API-backed setup, with an Allure report.</p>
-            <p class="refs"><a href="https://github.com/murillovskfilho/selenium-cucumber-bdd">Code</a> <a href="https://murillovskfilho.github.io/selenium-cucumber-bdd/">Report</a></p>
-          </article>
-          <article class="shot" data-reveal style="--i:2">
-            <a class="shot-img" href="https://murillovskfilho.github.io/mobile-e2e-appium-maestro/appium/"><img src="assets/img/report-mobile.jpg" width="1960" height="1470" alt="Allure report of the Appium suite on the Android emulator"></a>
-            <h3>Appium and Maestro, side by side</h3>
-            <p>The same shopping-app scenarios in both tools, each on its own emulator in CI, plus a test that pins a crash the suite found.</p>
-            <p class="refs"><a href="https://github.com/murillovskfilho/mobile-e2e-appium-maestro">Code</a> <a href="https://murillovskfilho.github.io/mobile-e2e-appium-maestro/">Report</a></p>
-          </article>
-        </div>
-
-        <ol class="index" data-reveal>
-          <li>
-            <h3>LLM evaluation harness</h3>
-            <p>42 cases on a Claude-based support assistant: hallucination, prompt injection hidden in data, privacy and the JSON contract. An LLM judge plus deterministic checks, with a self-test that proves the grader.</p>
-            <p class="tools">Claude API, TypeScript, Zod</p>
-            <p class="refs"><a href="https://github.com/murillovskfilho/llm-eval-harness">Code</a> <a href="https://github.com/murillovskfilho/llm-eval-harness/blob/main/evals/logistics-support/SUMMARY.md">Results</a></p>
           </li>
-          <li>
-            <h3>k6 load testing</h3>
-            <p>Smoke, load, stress and spike tests on a Node and PostgreSQL API. The load test finds a missing index the smoke test misses; the fix takes p95 at 50 users from 3.98 s to 3.9 ms, with the root cause shown in the query plans.</p>
-            <p class="tools">k6, PostgreSQL, Docker</p>
-            <p class="refs"><a href="https://github.com/murillovskfilho/k6-load-testing">Code</a> <a href="https://github.com/murillovskfilho/k6-load-testing#analysis">Analysis</a></p>
-          </li>
-          <li>
+          <li data-reveal>
             <h3>API RBAC testing</h3>
-            <p>136 tests against a multi-tenant billing API: forged JWTs, a permission matrix, BOLA, mass assignment and a strict OpenAPI contract.</p>
+            <div class="what">
+              <p>136 tests against a multi-tenant billing API: forged JWTs, a permission matrix, BOLA, mass assignment and a strict OpenAPI contract.</p>
+            </div>
             <p class="tools">TypeScript, Jest, OpenAPI</p>
             <p class="refs"><a href="https://github.com/murillovskfilho/api-rbac-testing">Code</a></p>
           </li>
-          <li>
+          <li data-reveal>
+            <h3>Appium and Maestro, side by side</h3>
+            <div class="what">
+              <p>The same shopping-app scenarios in both tools, each on its own emulator in CI, plus a test that pins a crash the suite found.</p>
+              <a class="thumb" href="https://murillovskfilho.github.io/mobile-e2e-appium-maestro/appium/"><img src="assets/img/report-mobile.jpg" width="1960" height="1470" loading="lazy" alt="Allure report of the Appium suite on the Android emulator"></a>
+            </div>
+            <p class="tools">Appium, Maestro, Android</p>
+            <p class="refs"><a href="https://github.com/murillovskfilho/mobile-e2e-appium-maestro">Code</a> <a href="https://murillovskfilho.github.io/mobile-e2e-appium-maestro/">Report</a></p>
+          </li>
+          <li data-reveal>
             <h3>Data pipeline quality lab</h3>
-            <p>E2E and SQL data-quality tests on a Kafka bronze/silver/gold pipeline, with a canary job that injects real defects to prove the checks work.</p>
+            <div class="what">
+              <p>E2E and SQL data-quality tests on a Kafka bronze/silver/gold pipeline, with a canary job that injects real defects to prove the checks work.</p>
+            </div>
             <p class="tools">Kafka, PostgreSQL, Jest</p>
             <p class="refs"><a href="https://github.com/murillovskfilho/data-pipeline-quality-lab">Code</a></p>
           </li>
-          <li>
+          <li data-reveal>
+            <h3>Selenium and Cucumber BDD</h3>
+            <div class="what">
+              <p>Declarative Gherkin on a Dockerized Selenium Grid, parallel scenarios and API-backed setup, with an Allure report.</p>
+              <a class="thumb" href="https://murillovskfilho.github.io/selenium-cucumber-bdd/"><img src="assets/img/report-allure.jpg" width="1960" height="1470" loading="lazy" alt="Allure report overview of the Selenium and Cucumber suite"></a>
+            </div>
+            <p class="tools">Java, Selenium, Cucumber</p>
+            <p class="refs"><a href="https://github.com/murillovskfilho/selenium-cucumber-bdd">Code</a> <a href="https://murillovskfilho.github.io/selenium-cucumber-bdd/">Report</a></p>
+          </li>
+          <li data-reveal>
+            <h3>k6 load testing</h3>
+            <div class="what">
+              <p>Smoke, load, stress and spike tests on a Node and PostgreSQL API. The load test finds a missing index the smoke test misses; the fix takes p95 at 50 users from 3.98 s to 3.9 ms, with the root cause shown in the query plans.</p>
+            </div>
+            <p class="tools">k6, PostgreSQL, Docker</p>
+            <p class="refs"><a href="https://github.com/murillovskfilho/k6-load-testing">Code</a> <a href="https://github.com/murillovskfilho/k6-load-testing#analysis">Analysis</a></p>
+          </li>
+          <li data-reveal>
+            <h3>LLM evaluation harness</h3>
+            <div class="what">
+              <p>42 cases on a Claude-based support assistant: hallucination, prompt injection hidden in data, privacy and the JSON contract. An LLM judge plus deterministic checks, with a self-test that proves the grader.</p>
+            </div>
+            <p class="tools">Claude API, TypeScript, Zod</p>
+            <p class="refs"><a href="https://github.com/murillovskfilho/llm-eval-harness">Code</a> <a href="https://github.com/murillovskfilho/llm-eval-harness/blob/main/evals/logistics-support/SUMMARY.md">Results</a></p>
+          </li>
+          <li data-reveal>
             <h3>QA Starter Kit</h3>
-            <p>A ready-to-clone Playwright and TypeScript setup: UI and API tests, typed fixtures, contract checks, multi-environment config and sharded CI.</p>
+            <div class="what">
+              <p>A ready-to-clone Playwright and TypeScript setup: UI and API tests, typed fixtures, contract checks, multi-environment config and sharded CI.</p>
+            </div>
             <p class="tools">Playwright, Zod, GitHub Actions</p>
             <p class="refs"><a href="https://github.com/murillovskfilho/qa-starter-kit">Code</a></p>
           </li>
